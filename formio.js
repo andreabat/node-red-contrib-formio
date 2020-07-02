@@ -31,8 +31,7 @@ module.exports = function (RED) {
           `Authenticazione verso ${config.project} con ${config.username}, *****`
         );
         let r = await formio.authenticate(config.username, config.password);
-        console.log("Authenticated");
-        console.log("Calling ", src);
+
         let formData = new formio.Form(src);
         let data = await formData.load();
         let flat = [];
@@ -43,7 +42,7 @@ module.exports = function (RED) {
           },
           true
         );
-        console.log("Preso i dati per ", src, " scrivo su ", node.output);
+
         if (node.output) {
           msg[node.output] = data;
           msg[node.output + "_flat"] = flat;
@@ -84,7 +83,7 @@ module.exports = function (RED) {
             this.send([null, msg]);
           }
         } else {
-          node.log(error);
+          console.log(error);
           throw error;
         }
       }
