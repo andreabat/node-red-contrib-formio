@@ -83,7 +83,7 @@ module.exports = function (RED) {
             this.send([null, msg]);
           }
         } else {
-          node.error(error.message, msg);
+          this.error(error.message, msg);
           console.log(error);
         }
       }
