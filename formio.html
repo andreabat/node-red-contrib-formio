@@ -15,7 +15,7 @@
     category: "storage-output",
     color: "#c0edc0",
     defaults: {
-      formio: { type: "formio", required: true },
+      formio: { type: "formio config", required: true },
       form: { value: "", required: false },
     },
     icon: "validate.png",
@@ -33,7 +33,7 @@
     category: "storage-output",
     color: "#c0edc0",
     defaults: {
-      formio: { type: "formio", required: true },
+      formio: { type: "formio config", required: true },
       src: { value: "", required: false },
       dst: { value: "", required: false },
     },
@@ -50,7 +50,7 @@
     category: "storage-output",
     color: "#c0edc0",
     defaults: {
-      formio: { type: "formio", required: true },
+      formio: { type: "formio config", required: true },
       form: { value: "", required: false },
       output: { value: "", required: false },
     },
@@ -63,7 +63,7 @@
     },
   });
 </script>
-<script type="text/x-red" data-template-name="formio">
+<script type="text/x-red" data-template-name="formio config">
     <div class="form-row">
         <label for="node-config-input-project"><i class="fa fa-database"></i> Project URL</label>
         <input type="text" id="node-config-input-project">
@@ -77,7 +77,7 @@
       <input type="password" id="node-config-input-password">
   </div>
 </script>
-<script type="text/x-red" data-help-name="formio">
+<script type="text/x-red" data-help-name="formio config">
   <p>Enter your Form.io credentials.</p>
 </script>
 
