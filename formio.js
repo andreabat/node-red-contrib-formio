@@ -124,5 +124,5 @@ module.exports = function (RED) {
 
   RED.nodes.registerType("formio validate", FormioValidate);
   RED.nodes.registerType("formio form", FormioForm);
-  RED.nodes.registerType("formio", FormioConfig);
+  RED.nodes.registerType("formio config", FormioConfig);
 };
